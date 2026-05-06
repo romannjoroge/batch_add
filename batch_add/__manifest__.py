@@ -58,9 +58,9 @@ Any header containing one of: `qty`, `quantity`, `qtty`, `amount`, `count`.
     ],
     "assets": {
         "web.assets_backend": [
-            "batch_add/static/src/js/batch_candidate_picker.js",
-            "batch_add/static/src/scss/batch_import_dialog.scss",
-            "batch_add/static/src/xml/batch_candidate_picker.xml",
+            "static/src/js/batch_candidate_picker.js",
+            "static/src/scss/batch_import_dialog.scss",
+            "static/src/xml/batch_candidate_picker.xml",
         ],
     },
     "installable": True,
