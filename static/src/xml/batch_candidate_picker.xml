@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="batch_add.BatchCandidatePicker" owl="1">
+        <div class="o_batch_candidate_picker">
+            <t t-if="candidateRecords.length">
+                <t t-foreach="candidateRecords" t-as="candidate" t-key="candidate.id">
+                    <button type="button"
+                            class="badge rounded-pill text-bg-secondary o_batch_candidate_picker_badge"
+                            t-on-click="() => this.selectCandidate(candidate)"
+                            t-att-title="candidate.data.display_name or candidate.resId">
+                        <t t-out="candidate.data.display_name or candidate.resId"/>
+                    </button>
+                </t>
+            </t>
+        </div>
+    </t>
+</templates>

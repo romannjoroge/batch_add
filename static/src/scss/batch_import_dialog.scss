@@ -1,0 +1,28 @@
+.o_dialog:has(.gc_batch_import_dialog) .modal-dialog {
+  width: 80vw;
+  max-width: 80vw;
+}
+
+.o_dialog:has(.gc_batch_import_dialog) .modal-content {
+  width: 80vw;
+}
+
+.gc_batch_import_dialog {
+  width: 80vw;
+  max-width: 80vw;
+}
+
+.gc_batch_import_dialog .o_batch_candidate_picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  white-space: normal;
+  overflow: visible;
+}
+
+.gc_batch_import_dialog .o_batch_candidate_picker_badge {
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
+}
+

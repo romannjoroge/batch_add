@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_order_batch_import_wizard,sale.order.batch.import.wizard,model_sale_order_batch_import_wizard,base.group_user,1,1,1,1
+access_sale_order_batch_import_line,sale.order.batch.import.line,model_sale_order_batch_import_line,base.group_user,1,1,1,1
+access_purchase_order_batch_import_wizard,purchase.order.batch.import.wizard,model_purchase_order_batch_import_wizard,base.group_user,1,1,1,1
+access_purchase_order_batch_import_line,purchase.order.batch.import.line,model_purchase_order_batch_import_line,base.group_user,1,1,1,1
+access_stock_picking_batch_import_wizard,stock.picking.batch.import.wizard,model_stock_picking_batch_import_wizard,base.group_user,1,1,1,1
+access_stock_picking_batch_import_line,stock.picking.batch.import.line,model_stock_picking_batch_import_line,base.group_user,1,1,1,1
+access_mrp_production_batch_import_wizard,mrp.production.batch.import.wizard,model_mrp_production_batch_import_wizard,base.group_user,1,1,1,1
+access_mrp_production_batch_import_line,mrp.production.batch.import.line,model_mrp_production_batch_import_line,base.group_user,1,1,1,1

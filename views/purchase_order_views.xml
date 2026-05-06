@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_purchase_order_form_batch_import" model="ir.ui.view">
+        <field name="name">purchase.order.form.batch.import</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <button name="action_open_batch_import_wizard"
+                        type="object"
+                        string="Batch Add (CSV)"
+                        class="btn-secondary"
+                        invisible="not partner_id"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/control/create[1]" position="after">
+                <button name="action_open_batch_import_wizard"
+                        type="object"
+                        string="Batch Add (CSV)"
+                        class="btn btn-link"
+                        context="{'active_model': 'purchase.order', 'active_id': parent.id}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

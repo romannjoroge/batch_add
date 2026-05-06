@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_mrp_production_batch_import_wizard_form" model="ir.ui.view">
+        <field name="name">mrp.production.batch.import.wizard.form</field>
+        <field name="model">mrp.production.batch.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Batch Add Components" class="o_form_dialog o_dialog_size_large gc_batch_import_dialog">
+                <div class="alert alert-info" role="alert">
+                    Upload a CSV or Excel file, click Parse File to preview matches, then pick the right product for any
+                    rows marked Multiple or No Match. Finally click Add Lines to insert them into this MO's components.
+                </div>
+                <group>
+                    <field name="production_id"/>
+                    <field name="file_name" invisible="1"/>
+                    <field name="sheet_name"
+                           placeholder="Optional (defaults to last sheet)"
+                           modifiers="{'invisible': ['|', ('file_name', '=', False), '&amp;', ('file_name', 'not ilike', '.xls'), ('file_name', 'not ilike', '.xlsx')]}"/>
+                    <field name="file_data" filename="file_name"/>
+                </group>
+                <separator string="Preview Lines"/>
+                <field name="line_ids">
+                    <tree editable="bottom" create="0">
+                        <field name="row_no" readonly="1"/>
+                        <field name="match_status" readonly="1"/>
+                        <field name="product_id"/>
+                        <field name="candidate_product_ids" widget="batch_candidate_picker"/>
+                        <field name="quantity"/>
+                        <field name="description" readonly="1"/>
+                        <field name="raw_data" readonly="1"/>
+                    </tree>
+                </field>
+                <footer>
+                    <button name="action_parse_file" type="object" string="Parse File" class="btn-primary"/>
+                    <button name="action_apply_lines" type="object" string="Add Lines" class="btn-secondary"
+                            modifiers="{'invisible': [('line_ids', '=', False)]}"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

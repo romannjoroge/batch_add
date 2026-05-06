@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_stock_picking_form_batch_import" model="ir.ui.view">
+        <field name="name">stock.picking.form.batch.import</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <!-- Create a control row (if missing) with a native Add a line button + our button -->
+            <xpath expr="//field[@name='move_ids_without_package']/tree[not(control)]" position="inside">
+                <control>
+                    <create string="Add a line"/>
+                    <button name="action_open_batch_import_wizard"
+                            type="object"
+                            string="Batch Add (CSV)"
+                            class="btn btn-link"
+                            context="{'active_model': 'stock.picking', 'active_id': parent.id}"
+                            modifiers="{'invisible': [('state', 'in', ('done', 'cancel'))]}"/>
+                </control>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
