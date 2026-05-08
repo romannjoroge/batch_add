@@ -11,7 +11,7 @@ class SaleOrder(models.Model):
             "type": "ir.actions.act_window",
             "name": "Batch Add Order Lines",
             "res_model": "sale.order.batch.import.wizard",
-            "view_mode": "form",
+            "views": [(False, "form")],
             "target": "new",
             "context": {
                 "default_order_id": self.id,

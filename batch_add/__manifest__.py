@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Batch Add (CSV)",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Tools",
     "summary": "Batch add product lines from CSV/Excel with fuzzy matching",
     "description": """
@@ -58,9 +58,9 @@ Any header containing one of: `qty`, `quantity`, `qtty`, `amount`, `count`.
     ],
     "assets": {
         "web.assets_backend": [
-            "static/src/js/batch_candidate_picker.js",
-            "static/src/scss/batch_import_dialog.scss",
-            "static/src/xml/batch_candidate_picker.xml",
+            "batch_add/static/src/js/batch_candidate_picker.js",
+            "batch_add/static/src/scss/batch_import_dialog.scss",
+            "batch_add/static/src/xml/batch_candidate_picker.xml",
         ],
     },
     "installable": True,

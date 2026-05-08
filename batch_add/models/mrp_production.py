@@ -11,7 +11,7 @@ class MrpProduction(models.Model):
             "type": "ir.actions.act_window",
             "name": "Batch Add Components",
             "res_model": "mrp.production.batch.import.wizard",
-            "view_mode": "form",
+            "views": [(False, "form")],
             "target": "new",
             "context": {
                 "default_production_id": self.id,

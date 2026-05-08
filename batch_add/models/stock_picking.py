@@ -11,7 +11,7 @@ class StockPicking(models.Model):
             "type": "ir.actions.act_window",
             "name": "Batch Add Move Lines",
             "res_model": "stock.picking.batch.import.wizard",
-            "view_mode": "form",
+            "views": [(False, "form")],
             "target": "new",
             "context": {
                 "default_picking_id": self.id,

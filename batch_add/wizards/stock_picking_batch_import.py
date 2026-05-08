@@ -72,7 +72,7 @@ class StockPickingBatchImportWizard(models.TransientModel):
             "type": "ir.actions.act_window",
             "res_model": "stock.picking.batch.import.wizard",
             "res_id": self.id,
-            "view_mode": "form",
+            "views": [(False, "form")],
             "target": "new",
         }
 

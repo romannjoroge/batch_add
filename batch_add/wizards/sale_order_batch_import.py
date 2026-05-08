@@ -67,7 +67,7 @@ class SaleOrderBatchImportWizard(models.TransientModel):
             'type': 'ir.actions.act_window',
             'res_model': 'sale.order.batch.import.wizard',
             'res_id': self.id,
-            'view_mode': 'form',
+            'views': [(False, 'form')],
             'target': 'new',
         }
 

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Odoo Version](https://img.shields.io/badge/Odoo-17.0-green.svg)](https://www.odoo.com/)
+[![Odoo Version](https://img.shields.io/badge/Odoo-18.0-green.svg)](https://www.odoo.com/)
 [![License](https://img.shields.io/badge/License-LGPL--3-blue.svg)](https://opensource.org/licenses/LGPL-3.0)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/fractal-solutions/batch_add/graphs/commit-activity)
@@ -223,7 +223,7 @@ PROD-002,USB Cable 2m,987654321,7,"Bulk pack"
 
 | 🔧 Spec | 📋 Details |
 |---------|------------|
-| **Odoo Version** | 17.0 ✅ |
+| **Odoo Version** | 18.0 ✅ |
 | **Python** | 3.10+ ✅ |
 | **License** | LGPL-3 ✅ |
 | **Browser Support** | All modern browsers ✅ |
