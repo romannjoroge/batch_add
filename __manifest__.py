@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Batch Add (CSV)",
-    "version": "17.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Tools",
     "summary": "Batch add product lines from CSV/Excel with fuzzy matching",
     "description": """
