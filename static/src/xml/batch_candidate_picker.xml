@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
     <t t-name="batch_add.BatchCandidatePicker" owl="1">
-        <div class="o_batch_candidate_picker">
+        <div class="o_batch_candidate_picker"
+             t-on-mousedown="(ev) => ev.stopPropagation()"
+             t-on-click="(ev) => ev.stopPropagation()">
             <t t-if="candidateRecords.length">
                 <t t-foreach="candidateRecords" t-as="candidate" t-key="candidate.id">
                     <button type="button"

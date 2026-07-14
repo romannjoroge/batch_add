@@ -19,7 +19,8 @@ export class BatchCandidatePicker extends Component {
     const resId = candidate?.resId;
     if (!resId) return;
     const displayName = candidate?.data?.display_name || "";
-    await this.props.record.update({ product_id: [resId, displayName] });
+
+    await this.props.record.update({ product_id: { id: resId, display_name: displayName } });
   }
 }
 

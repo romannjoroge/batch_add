@@ -157,7 +157,7 @@ class PurchaseOrderBatchImportWizard(models.TransientModel):
                 uom_field = candidate
                 break
         if uom_field:
-            uom = product.uom_po_id or product.uom_id
+            uom = product.uom_id
             vals[uom_field] = uom.id
 
         if 'date_planned' in PurchaseLine._fields:
