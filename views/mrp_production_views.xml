@@ -6,16 +6,13 @@
         <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
         <field name="arch" type="xml">
             <!-- Create a control row (if missing) with a native Add a line button + our button -->
-            <xpath expr="//field[@name='move_raw_ids']/tree[not(control)]" position="inside">
-                <control>
-                    <create string="Add a line"/>
-                    <button name="action_open_batch_import_wizard"
-                            type="object"
-                            string="Batch Add (CSV)"
-                            class="btn btn-link"
-                            context="{'active_model': 'mrp.production', 'active_id': parent.id}"
-                            modifiers="{'invisible': [('state', 'in', ('done', 'cancel'))]}"/>
-                </control>
+            <xpath expr="//field[@name='move_raw_ids']/list/control" position="inside">
+                <button name="action_open_batch_import_wizard"
+                        type="object"
+                        string="Batch Add (CSV)"
+                        class="btn btn-link"
+                        context="{'active_model': 'mrp.production', 'active_id': parent.id}"
+                        invisible="state in ('done', 'cancel')"/>
             </xpath>
         </field>
     </record>

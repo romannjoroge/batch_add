@@ -12,7 +12,7 @@
                         class="btn-secondary"
                         invisible="not partner_id"/>
             </xpath>
-            <xpath expr="//field[@name='order_line']/tree/control/create[1]" position="after">
+            <xpath expr="//field[@name='order_line']/list/control/create[1]" position="after">
                 <button name="action_open_batch_import_wizard"
                         type="object"
                         string="Batch Add (CSV)"
