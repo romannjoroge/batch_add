@@ -14,7 +14,7 @@
                     <field name="file_name" invisible="1"/>
                     <field name="sheet_name"
                            placeholder="Optional (defaults to last sheet)"
-                           modifiers="{'invisible': ['|', ('file_name', '=', False), '&amp;', ('file_name', 'not ilike', '.xls'), ('file_name', 'not ilike', '.xlsx')]}"/>
+                           invisible="not file_name or ('.xls' not in file_name and '.xlsx' not in file_name)"/>
                     <field name="file_data" filename="file_name"/>
                 </group>
                 <separator string="Preview Lines"/>
@@ -32,7 +32,7 @@
                 <footer>
                     <button name="action_parse_file" type="object" string="Parse File" class="btn-primary"/>
                     <button name="action_apply_lines" type="object" string="Add Lines" class="btn-secondary"
-                            modifiers="{'invisible': [('line_ids', '=', False)]}"/>
+                            invisible="not line_ids"/>
                     <button string="Cancel" class="btn-secondary" special="cancel"/>
                 </footer>
             </form>
