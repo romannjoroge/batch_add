@@ -32,7 +32,7 @@
                 <footer>
                     <button name="action_parse_file" type="object" string="Parse File" class="btn-primary"/>
                     <button name="action_apply_lines" type="object" string="Add Lines" class="btn-secondary"
-                            invisibile="not line_ids"/>
+                            invisible="not line_ids"/>
                     <button string="Cancel" class="btn-secondary" special="cancel"/>
                 </footer>
             </form>
